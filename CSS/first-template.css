@@ -1,0 +1,789 @@
+/*  global  */
+* {
+box-sizing: border-box;
+}
+/* for mobiles */
+@media (max-width:767px) {
+    .container{
+        margin: 0px 10px;
+        padding: 0px 15px ;
+    }
+}
+html{
+    scroll-behavior: smooth;
+}
+/* .maincontainer{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-areas:
+        "h h h h h"
+        "h h h h h"
+        "h h h h h"
+        "l l l l l"
+        "l l l l l"
+        "l l l l l"
+        "s s s s s"
+        "s s s s s"
+        "s s s s s"
+        "p p p p p"
+        "p p p p p"
+        "p p p p p"
+        "a a a a a"
+        "a a a a a"
+        "a a a a a"
+        "c c c c c"
+        "c c c c c"
+        "c c c c c";
+}
+.header{
+    grid-area: h ;
+}
+.landing{
+    grid-area: l;
+}
+.services{
+    grid-area: s ;
+}
+.portfolio{
+    grid-area: p;
+}
+.about{
+    grid-area: a;
+}
+.contact{
+    grid-area: c;
+} */
+/* for small screens */
+@media (min-width:768px) {
+    .container{
+        width: 700px;
+    }
+}
+/* for medium screens */
+@media (min-width:992px) {
+    .container{
+        display: grid;
+        width: 950px;
+        align-content: space-around;
+        align-items: center;
+    }
+}
+/* for large screens */
+@media (min-width:1200px) {
+    .container{
+        width: 1150px;
+    }
+}
+.component{
+    color: #dfe2dc;
+    font-size: 100px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -4;
+    margin: 0%;
+}
+/* that is global and should be applied in Every project */
+
+/*here we are starting the body design*/
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* da section el header */
+.header{
+    padding-left:20px;
+    height: auto;
+    width: 100vw;
+    height: max-content;
+    margin-top: 0px;
+    /* background-color: #f5f5f5; */    
+    background-color: #eee
+}
+
+.header .container{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-left: 25px;
+padding-right: 25px;
+/* margin-left: auto;
+margin-right: auto; */
+}
+
+.logo{
+    font-size: xx-large;
+    font-weight: 700;
+}
+/* .container .logo {
+    display: flex;
+}
+ .logo1{
+
+    width: 25px;
+    height: 25px;
+    border: 3px solid rgb(19, 47, 172);
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+
+
+}
+ .logo2{
+    width: 25px;
+    height: 25px;
+    border: 2px solid rgb(19, 172, 172);
+    border-radius: 50%;
+    margin-left: -54px;    
+} */
+
+.header .links{
+    position: relative;
+
+}
+
+.header .links .icon {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30px;
+    justify-content: flex-end;
+}
+.header .links .icon span{
+    background-color:#2196f3;
+    margin-bottom: 5px;
+    height: 2px;
+} 
+
+.header .icon span:first-child{
+    width:100%;    
+}
+.header .icon span:last-child{
+    width:100%;
+}
+.header .icon span:nth-child(2) {
+    width:60%;
+    transition: 0.2s;
+}
+
+.header .icon span:nth-child(2):hover{
+    width: 100%;
+}
+
+.header .links ul::before{
+    content: ""; 
+    /* width: 25px;
+    height: 25px; */
+    border-width: 10px;
+    border-style: solid ;
+    border-color: transparent transparent rgba(63, 207, 243, 0.788) transparent;
+    position: absolute; 
+    right: 5px;
+    top: -21px;
+
+}
+
+
+ .header .links ul{
+    list-style: none;
+    margin: 0%;
+    padding: 0%;
+    background-color: rgba(63, 207, 243, 0.788);
+    position: absolute;
+    right: 0;
+    min-width: 150px;
+    top: calc(100% + 15px);
+    display: none;
+    z-index: 1;
+ }
+
+ .header .links:hover ul{
+    display: block;
+ }
+
+ .header .links ul a{
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color:rgb(61, 61, 61) ;
+ }
+
+ .header .links ul a:hover{
+    padding-left: 25px;
+ }
+
+.header .links ul li:not(:last-child){
+    border-bottom: 1px solid rgba(163, 157, 157, 0.301);
+}
+
+/* .bars{
+margin-left: 50%;
+color:rgb(117, 117, 117) ;
+transition: 0.3s;
+} */
+
+
+/* de nhayet el header */
+
+/* hna hnbd2 el landing ( awl 7aga ttktb k main fe elsaf7a */
+
+
+.landing {
+    background-image: url(../images/firstone.jpg);
+    background-size: cover;
+    /* background-size: 100vw calc(100vh - 25px); */
+    height: calc(100vh - 25px);
+    width: 97vw;
+    position: relative;
+    filter: grayscale(70%);
+}
+
+.landing .heading {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+    width: 500px;
+    max-width: 100%;
+}
+
+.landing .heading h1{
+    /* margin-left: -50px; */
+    margin-top: 0%;
+    font-size: 45px;
+    font-weight: bolder;
+    color: white
+
+}
+
+.landing .heading p{
+    text-transform: capitalize ;
+    font-size: 22px;
+    line-height: 1.2;
+    /* font-weight: bold; */
+    color: rgb(70, 69, 69)
+}
+/* keda 5lasna el landing isa */
+
+
+
+/* hena b2a hnbd2 tnse2 el features */
+
+.features {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color:rgba(250, 235, 215, 0.075);
+    padding-right: 0;
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.features .feat {
+    padding: 20px;
+    text-align: center;
+    color:rgb(70, 69, 69);
+
+}
+
+.features .feat i {
+    color: cornflowerblue;
+    font-size: xx-large;
+}
+
+.features .feat h3 {
+    color: black;
+    font-weight: 700;
+    font-size: larger;
+    margin:30px 0px ;
+}
+
+.features .feat p {
+line-height: 1.2 ;
+color: #777;
+font-size: large;
+}
+/*  keda 5lst w hnbd2 fe el services  */
+
+.services {
+    padding: 60px 0px;
+    width: 100vw;
+    height: 100vh;
+    padding-left: auto;
+}
+.services .container{
+    display: grid;
+}
+
+    /*  el component el5as bl header bta3 elsections de fo2 fe global */
+
+.component + p {
+ margin-top: -40px;
+ font-size: large;
+ text-align: center ;
+ color: rgba(85, 85, 85, 0.637);
+}
+
+/* elbody b2a el t7t elheader */
+.services .servebody{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+    margin-top: 100px;    
+    margin-left: auto;
+}
+
+
+.services .servebody .serve {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.services .servebody .serve i { 
+    font-size: 35px;
+    color: #777;
+    flex-basis: 60px; 
+}
+.services .servebody .serve .text{
+    flex:1;
+
+}
+.services .servebody .serve h3 {
+    margin: 0 0 10px;
+
+}
+.services .servebody .serve  p {
+  color: rgb(141, 139, 139);
+  font-weight: 300;
+  line-height: 1.2;
+
+}
+.services .servebody .img {
+    text-align: center;
+    position: relative;
+    width: 250px;
+    margin-right: 0%;
+}
+.services .servebody img {
+    display: inline-block;
+    width: 250px;
+    height: 300px;
+}
+/* 3shan n3ml elframe el gmb elsoraa */
+.services .servebody .img::before{
+    content: '';
+    position: absolute;
+    right:0;
+    background-color: rgba(119, 119, 119, 0.658);
+    width: 90px;
+    height: calc(100% + 80px);
+    top:-40px;
+    z-index: -1 ;
+
+}
+/*  hna bn3'yr el details de 3shan tnaseb elt3'yeer fe shashat el mobile */
+@media (max-width:767px){
+    .services .servebody .serve{
+        flex-direction: column;
+        text-align: center;
+    }
+        .services .component {
+            font-size: 60px;
+        }
+        .services .component + p {
+            margin-top: -25px;
+        }
+}
+/* 3shan elsora matzhrsh lma elshasha ts3'r , mlhash lazma y3ni */
+@media (max-width:1000px){
+   .services .imghid{
+        display: none;
+    }
+}
+/* keda 5lsna el services w el7amdullah */
+        /* nbd2 fe el portfolio */
+
+.portfolio{
+    display: grid;
+    /* grid-template-columns: 1fr; */
+    padding: 60px 0px ;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(240, 248, 255, 0.233);
+    padding-left: 5%;
+
+
+}
+/* .portfolio .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     } */
+
+     /* .portfolio .container .portbody {
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+         
+} */
+
+.portfolio .container .portbody {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin-top: 80px;
+    /* margin-left: 5%; */
+}
+.card{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(240, 248, 255, 0);
+}
+.card img{
+    width: 220px;
+    height: 200px;
+    margin-left: 20%;
+    filter: grayscale(50%);
+    
+}
+.card .text{
+    padding: 20px;
+}
+.card h3{
+    margin: 0px;
+    color: rgb(77, 76, 76);
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 0px;
+}
+.card p{
+    text-align: center;
+    text-indent: 10px;
+    color: rgb(141, 139, 139);
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+/* @media (max-width:580px) {
+.portfolio{
+    display:grid;
+}
+} */
+.pppo{
+    margin-top: 25px;
+}
+@media (max-width:1000px){
+
+        .portfolio .component {
+            font-size: 60px;
+        }
+        .portfolio .component + p {
+            margin-top: -25px;
+
+        }
+        .portfolio{
+            position: relative;
+            top: 90vh;
+        }
+    }
+/* keda 5lsa elgoz2 da 3shan ana gaDDeeeeyt */
+/* n5osh fe elabout 3la tool (mem hany ramze:D) */
+/* .about .aboutbody {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 80px;
+    padding-left: 10%;
+    width: 100vw;
+}
+.about.text{
+    flex-basis: calc(100% - 500px);
+} */
+.about ,div{
+    display: inline-block;
+}
+.about .aboutbody{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+    margin-top: 100px;  
+    margin-left: 20%;
+}
+.about .text {
+    grid-column: 2;
+    padding-bottom: -40px;
+}
+.about .imge{
+    position: relative;
+    width:180px ;
+    height: 200px;
+    margin-bottom: 100px;
+}
+.about img{
+    display: inline-block;
+    width: 180px;
+    height: 200px;
+    filter: grayscale(65%);
+}
+.about .aboutbody .imge::after{
+    content: '';
+    position: absolute;
+    left:-3%;
+    background-color: rgba(119, 119, 119, 0.103);
+    width: 60px;
+    height: calc(100% + 80px);
+    top:-40px;
+    z-index: -1 ;
+}
+.about .aboutbody .imge::before{
+    content: '';
+    position: absolute;
+    right :-80px;
+    width: 50px;
+    height: 150px ; 
+    border-left: 60px solid rgba(0, 0, 255, 0.473);
+    border-bottom: 50px solid rgba(0, 0, 255, 0.459);
+    top: -10%;
+    z-index: -1 ;
+
+}
+@media (max-width:960px){
+    .about img,
+    .about .aboutbody .imge::after,
+    .about .aboutbody .imge::before{
+        display:none;
+    }
+    .about .text{
+        grid-column: 1;
+        font-size: smaller;
+        text-align: start;
+        padding-left: 5px; 
+       }
+       .about .container{
+        height: 100px;
+       }
+        .about .aboutbody{
+            display: inline-block;
+            padding-top: 0;
+            height:0px;
+            margin-top:0px;
+            margin-left: 0px;
+        }
+        .about{
+            height: 150px;
+        }
+}
+
+.about .aboutbody h3{
+    position: relative;
+    width: 400px;
+}
+.about .aboutbody h3::after{
+    content: "";
+    width: 120px;
+    height: 2px;
+    background-color: blue;
+    position: absolute;
+    left: 0px;
+    bottom : -7px
+    
+}
+.aboutbody{
+    width: 400px;
+    color: #777;
+}
+
+@media (max-width:1000px){
+    .about{
+        position: relative; 
+        top: 175vh; 
+    }
+}
+@media (max-width:1000px){
+    .contact{
+        position: relative; 
+        top: 200vh; 
+    }
+}
+@media (max-width:1000px){
+    .footer{
+        position: relative; 
+        top: 220vh; 
+    }
+
+
+}
+
+@media (max-width:650px){
+    .contact{
+        position: relative; 
+        top: 265vh; 
+    }
+}
+
+@media (max-width:650px){
+.footer{
+    position: relative; 
+    top: 285vh; 
+}
+}
+
+@media (max-width:650px){
+
+    .about .component {
+        font-size: 60px;
+    }
+    .about .component + p {
+        margin-top: -25px;
+
+    }
+    .about{
+        position: relative; 
+        top: 235vh; 
+    }
+}
+
+/* de keda 5lsna elabout w hnbd2 fe elcontact */
+.conbody{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.conbody h2{
+    margin-bottom: 0%;
+    margin-left: 10%;
+    color: rgb(48, 71, 114);
+    font-style: italic;
+    font-size: x-large;
+}
+.conbody h3{
+    margin-bottom: 7px;
+    margin-left: 12%;
+    font-size: larger;
+    position: relative;
+    color: brown;
+
+}
+.conbody h3::before{
+    content: "";
+    width:200px;
+    height: 15px;
+    background-color: #eee;
+    position: absolute;
+    left: -15px;
+    bottom: -5px;
+    z-index: -1;
+}
+.line{
+    display:flex;
+    margin-left: 13%;
+}
+.contact .line::after{
+    content: "";
+    width: 90%;
+    height: 10px;
+    background-color:rgba(32, 178, 171, 0.562);
+    position: absolute;
+    left: 50px;
+    z-index: -1;
+}
+.line p{
+    margin-top: 0px;
+}
+.line a {
+    margin-left: 5px;
+    margin-top: 0px;
+}
+.facebook{
+    width: 20px;
+    height: 20px;
+    background-color: rgba(27, 46, 216, 0.76);
+    border-radius: 50%;
+    color: white;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-decoration: none;
+}
+.linkedin{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(5, 88, 109);
+    /* border-radius: 50%; */
+    color: white;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+@media (max-width:600px){
+
+    .contact .component {
+        font-size: 60px;
+    }
+    .contact .component + p {
+        margin-top: -25px;
+
+    }
+    .contact{
+position: relative;
+top:250vh   
+ }
+} 
+
+@media (max-width:600px){
+
+    .footer {
+        font-size: 14px;
+    }
+
+   
+    .footer{
+position: relative;
+top:275vh   
+ }
+} 
+
+
+@media (max-width:380px){
+ .portfolio{
+        display: none;
+    }
+}
+
+.footer{
+    width: 100vw;
+    background-color: #aeb1ad;
+    color: rgba(0, 0, 0, 0.651);
+    font-size: larger;
+    text-align: center;
+    padding-top: 5px;
+}
+.footer span{
+    font-weight: bold;
+    color: white;
+}
+.button{
+    height: 25px;
+    width: max-content;
+    border: 1px solid #aeb1ad;
+    border-radius: 25%;
+    position: fixed;
+    top:90%;
+}
+.button a {
+    text-decoration: none;
+    color: #aeb1ad
+} 
